@@ -1,0 +1,88 @@
+/* Reset global */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling dasar untuk halaman */
+html,
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282a36;
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Penyesuaian untuk layar kecil */
+@media screen and (max-width: 520px) {
+  html,
+  body {
+    font-size: 50%; /* Mengurangi ukuran font */
+  }
+
+  .container {
+    width: 90%; /* Lebar lebih fleksibel */
+    height: auto; /* Tinggi otomatis */
+  }
+
+  .heart {
+    width: 40px; /* Ukuran hati lebih kecil */
+    height: 40px;
+  }
+}
+
+/* Kontainer utama */
+.container {
+  width: 50rem;
+  height: 20rem;
+  position: relative;
+}
+
+/* SVG container */
+.svg-container {
+  z-index: 2;
+  position: absolute;
+}
+
+.mo-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Garis vertikal */
+.line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+/* Huruf-huruf */
+.lttr {
+  fill: #a5b9c7;
+}
+
+/* Styling untuk bentuk hati */
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #ff4757;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Class untuk menampilkan hati */
+.heart.visible {
+  opacity: 1;
+}

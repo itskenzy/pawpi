@@ -1,0 +1,109 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #FFD392; /* Sky blue background */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Container utama game */
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 320px;
+}
+
+/* Canvas game */
+#game {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+/* Informasi skor */
+#score-left, #score-right {
+    position: absolute;
+    top: 10px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#score-left {
+    left: 10px;
+}
+
+#score-right {
+    right: 10px;
+}
+
+/* Tombol Start Game */
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-button:hover {
+    background: #0056b3;
+}
+
+/* Layar Game Over */
+#game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    z-index: 10;
+}
+
+#game-over.hidden {
+    display: none;
+}
+
+/* Tombol Try Again dan Next */
+button.game-over-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.game-over-button:hover {
+    background: #0056b3;
+}

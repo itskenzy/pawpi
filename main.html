@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pawpi-game</title>
+    <link rel="stylesheet" href="game.css">
+    <style>
+        /* CSS untuk menaikkan gambar bola.png */
+        .raised {
+            position: relative;
+            top: -110px; /* Menggeser elemen 5px ke atas */
+        }
+        .raised img {
+            width: 200px; /* Lebar gambar */
+            height: 200px; /* Tinggi gambar */
+        }
+        /* Margin antara gambar dan canvas */
+        #game-container {
+            margin-top: -150px; /* Memberikan spasi antara gambar dan canvas */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="raised">
+        <img src="pawpi.png">
+    </div>
+    <div 
+    </div>
+    <div id="game-container">
+        <!-- Canvas untuk game -->
+        <canvas id="game"></canvas>
+
+        <!-- Informasi skor -->
+        <div id="score-left">Distance: 0</div>
+        <div id="score-right">☕ 0</div>
+
+        <!-- Layar Game Over -->
+        <div id="game-over" class="hidden"></div>
+
+        <!-- Tombol Start Game -->
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Gambar-gambar yang digunakan -->
+    <img id="bg" src="bg.png" hidden>
+    <img id="platform" src="alas.png" hidden>
+    <img id="catRun" src="catrun.png" hidden>
+    <img id="catJump" src="catjump.png" hidden>
+    <img id="kopi" src="kopi.png" hidden>
+    <img id="bola3" src="bola3.png" hidden>
+    <img id="bola4" src="bola4.png" hidden>
+    <img id="title" src="bola.png" hidden>
+    <img id="subtitle" src="bola1.png" hidden>
+
+    <!-- File JavaScript -->
+    <script src="game.js"></script>
+</body>
+</html>
